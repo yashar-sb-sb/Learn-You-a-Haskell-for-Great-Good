@@ -26,3 +26,10 @@ range1to20Even = [2,4..20]
 range1to20MultipleOfThree = [2,4..20]
 range20to1 = [20,19..1]
 weirdFloatRange = [0.1, 0.3 .. 1]
+
+
+infList = [13,26..]
+takeInfListEq = take 24 infList == [13,26..24*13]
+cycleList = cycle [1,2,3]
+repeatElem = repeat 5
+replicateNum = replicate 3 10
