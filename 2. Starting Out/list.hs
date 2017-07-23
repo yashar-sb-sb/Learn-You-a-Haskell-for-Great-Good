@@ -33,3 +33,18 @@ takeInfListEq = take 24 infList == [13,26..24*13]
 cycleList = cycle [1,2,3]
 repeatElem = repeat 5
 replicateNum = replicate 3 10
+
+evenComprehension = [x*2 | x <- [1..10]]
+evenComprehensionGreaterThanOrEq12 = [x*2 | x <- [1..10], x*2 >= 12]
+mod7is3From50to100 = [x | x <- [50..100], x `mod` 7 == 3]
+boomBangs xs = [if x < 10 then "BOOM!" else "BANG!" | x <- xs, odd x]
+boomBangs7to13 = boomBangs [7..13]
+multiPredicates = [ x | x <- [10..20], x /= 13, x /= 15, x /= 19]
+multiLists = [ x*y | x <- [2,5,10], y <- [8,10,11]]
+nouns = ["hobo", "frog", "pope"]
+adjectives = ["lazy", "grouchy", "scheming"]
+nounsAndAdjectives = [adjective ++ " " ++ noun | adjective <- adjectives, noun <- nouns]
+length' xs = sum [1 | _ <- xs]
+removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
+xxs = [[1,3,5,2,3,1,2,4,5],[1,2,3,4,5,6,7,8,9],[1,2,4,2,1,6,3,1,3,2,3,6]]
+removeOdd = [ [ x | x <- xs, even x ] | xs <- xxs]
