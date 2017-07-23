@@ -20,3 +20,9 @@ minNum = minimum someNumbers
 sumNum = sum someNumbers
 productNum = product someNumbers
 has13 = 13 `elem` someNumbers
+
+range1to20 = [1..20]
+range1to20Even = [2,4..20]
+range1to20MultipleOfThree = [2,4..20]
+range20to1 = [20,19..1]
+weirdFloatRange = [0.1, 0.3 .. 1]
