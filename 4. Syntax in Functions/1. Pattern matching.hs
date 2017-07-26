@@ -18,3 +18,18 @@ factorial' n = product [1..n]
 
 factorials :: [Integer]
 factorials = 1:[a*b | (a, b) <- zip [1..] factorials]
+
+addVectors :: (Num a) => (a, a) -> (a, a) -> (a, a)
+addVectors (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)
+
+first :: (a, b, c) -> a
+first (x, _, _) = x
+
+second :: (a, b, c) -> b
+second (_, y, _) = y
+
+third :: (a, b, c) -> c
+third (_, _, z) = z
+
+listOfTuples = [(1,3), (4,3), (2,4), (5,3), (5,6), (3,1)]
+sumOfTuples = [a+b | (a,b) <- listOfTuples]
