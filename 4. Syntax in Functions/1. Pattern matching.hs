@@ -33,3 +33,25 @@ third (_, _, z) = z
 
 listOfTuples = [(1,3), (4,3), (2,4), (5,3), (5,6), (3,1)]
 sumOfTuples = [a+b | (a,b) <- listOfTuples]
+
+head' :: [a] -> a
+head' (x:_) = x
+head' _ = error "Don't pass garbage to my function!!!"
+
+tell :: (Show a) => [a] -> String
+tell [] = "The list is empty"
+tell (x:[]) = "The list has one element: " ++ show x
+tell (x:y:[]) = "The list has two elements: " ++ show x ++ " and " ++ show y
+tell (x:y:_) = "The list is too long. first two elements are: " ++ show x ++ " and " ++ show y
+
+length' :: (Num b) => [a] -> b
+length' [] = 0
+length' (_:xs) = 1 + length' xs
+
+sum' :: (Num a) => [a] -> a
+sum' [] = 0
+sum' (x:xs) = x + sum' xs
+
+firstLet :: String -> String
+firstLet "" = "Empty string, whoops!"
+firstLet all@(x:xs) = "The first letter of " ++ all ++ " is " ++ [x]
