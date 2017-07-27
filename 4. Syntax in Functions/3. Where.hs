@@ -27,3 +27,9 @@ bmiTell'' weight height
     | otherwise = "You're a whale, congratulations!"
     where bmi = weight / height ^ 2
           (skinny, normal, fat) = (18.5, 25.0, 30.0)
+
+
+initials :: String -> String -> String
+initials firstName lastName = [f] ++ ". " ++ [l] ++ "."
+    where (f:_) = firstName
+          (l:_) = lastName
