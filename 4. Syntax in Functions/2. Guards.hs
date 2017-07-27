@@ -18,3 +18,10 @@ max' :: (Ord a) => a -> a -> a
 max' x y
     | x < y = y
     | otherwise = x
+
+
+compare' :: (Ord a) => a -> a -> Ordering
+a `compare'` b
+    | a > b = GT
+    | a < b = LT
+    | otherwise = EQ
