@@ -33,3 +33,8 @@ initials :: String -> String -> String
 initials firstName lastName = [f] ++ ". " ++ [l] ++ "."
     where (f:_) = firstName
           (l:_) = lastName
+
+
+calcBmis :: (Fractional a, Ord a) => [(a, a)] -> [a]
+calcBmis xs = map bmi xs
+    where bmi (weight, height) = weight / height ^ 2
