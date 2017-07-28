@@ -16,3 +16,11 @@ multHeyThere = (let a = 100; b = 200; c = 300 in a*b*c, let foo = "Hey "; bar = 
 
 
 number2 = (let (a,b,c) = (1,2,3) in a+b+c) * 100
+
+
+calcBmis :: (Fractional a) => [(a,a)] -> [a]
+calcBmis xs = [bmi | (w, h) <- xs, let bmi = w / h ^ 2]
+
+
+calcBmis' :: (Fractional a) => [(a,a)] -> [a]
+calcBmis' xs = let bmi (w, h) = w / h ^ 2 in map bmi xs
