@@ -10,3 +10,6 @@ number1 = 4 * (let a = 9 in a + 1) + 2
 
 squareList :: (Num a) => [a] -> [a]
 squareList xs = let square x = x * x in map square xs
+
+
+multHeyThere = (let a = 100; b = 200; c = 300 in a*b*c, let foo = "Hey "; bar = "there!" in foo ++ bar)
