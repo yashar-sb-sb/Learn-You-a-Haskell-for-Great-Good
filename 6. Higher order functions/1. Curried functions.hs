@@ -4,3 +4,7 @@ compareHundredWith = compare 100
 
 divideByTen :: (Fractional a) => a -> a
 divideByTen = (/10)
+
+
+isUpperAlpha :: Char -> Bool
+isUpperAlpha = (`elem` ['A'..'Z'])
